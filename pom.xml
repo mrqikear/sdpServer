@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sdp</groupId>
+    <artifactId>sdpServer</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>websoket</module>
+    </modules>
+
+
+    <packaging>pom</packaging>
+
+<properties>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<maven.compiler.source>1.8</maven.compiler.source>
+<maven.compiler.target>1.8</maven.compiler.target>
+<spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+<spring-boot.version>2.3.3.RELEASE</spring-boot.version>
+<mysql.version>6.0.4</mysql.version>
+<mybatis.version>1.3.2</mybatis.version>
+<lombok.version>1.16.18</lombok.version>
+<druid.version>1.1.10</druid.version>
+<log4j.version>1.2.17</log4j.version>
+<slf4j-nop.versiom>1.7.2</slf4j-nop.versiom>
+<jackson-dataformat-yaml.version>2.3.3</jackson-dataformat-yaml.version>
+<fast-json.version>1.2.73</fast-json.version>
+</properties>
+
+
+
+<dependencyManagement>
+<dependencies>
+    <!-- 定义 spring cloud 版本 -->
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+    </dependency>
+    <!-- 定义 spring boot 版本 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+    </dependency>
+
+    <!-- jetty启动 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>2.3.2.RELEASE</version>
+    </dependency>
+
+
+
+    <!-- websoket -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-websocket</artifactId>
+        <version>2.3.2.RELEASE</version>
+    </dependency>
+
+
+    <!-- 定义 mysql 版本 -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
+    </dependency>
+    <!-- 定义 mybatis 版本 -->
+    <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>${mybatis.version}</version>
+    </dependency>
+    <!-- 定义 lombok 版本 -->
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+    <!--fast json -->
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fast-json.version}</version>
+    </dependency>
+
+
+    <!-- 德鲁伊版本-->
+
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+        <version>${druid.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>${log4j.version}</version>
+    </dependency>
+
+
+
+    <dependency> <!-- 引入log4j2依赖 -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-log4j2</artifactId>
+        <version>2.3.2.RELEASE</version>
+    </dependency>
+
+
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j-impl</artifactId>
+        <version>2.9.1</version>
+    </dependency>
+
+
+
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-nop</artifactId>
+        <version>${slf4j-nop.versiom}</version>
+    </dependency>
+
+    <dependency>  <!-- 加上这个才能辨认到log4j2.yml文件 -->
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-yaml</artifactId>
+        <version>${jackson-dataformat-yaml.version}</version>
+    </dependency>
+
+    <!--security -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+        <version>2.3.1.RELEASE</version>
+    </dependency>
+
+    <!--security 配置 -->
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-config</artifactId>
+        <version>5.3.4.RELEASE</version>
+    </dependency>
+
+
+    <!--Eureka-server -->
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-eureka-server</artifactId>
+        <version>1.4.7.RELEASE</version>
+    </dependency>
+
+
+
+    <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka -->
+    <!--Eureka-->
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-eureka</artifactId>
+        <version>1.4.7.RELEASE</version>
+    </dependency>
+
+
+
+</dependencies>
+</dependencyManagement>
+
+</project>
