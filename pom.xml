@@ -9,6 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>websoket</module>
+        <module>erukaServer</module>
+        <module>sdb_common</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -27,6 +29,7 @@
         <slf4j-nop.versiom>1.7.2</slf4j-nop.versiom>
         <jackson-dataformat-yaml.version>2.3.3</jackson-dataformat-yaml.version>
         <fast-json.version>1.2.73</fast-json.version>
+        <java-jwt.version>3.10.3</java-jwt.version>
     </properties>
 
 
@@ -84,6 +87,15 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+
+
+            <!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${java-jwt.version}</version>
+            </dependency>
+
 
 
             <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->

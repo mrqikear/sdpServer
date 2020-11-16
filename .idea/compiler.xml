@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="erukaServer" />
         <module name="websoket" />
+        <module name="sdb_common" />
       </profile>
     </annotationProcessing>
   </component>

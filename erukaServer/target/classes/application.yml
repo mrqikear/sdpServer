@@ -1,0 +1,13 @@
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: false  #是否将自己组册到EURAKA中
+    fetch-registry: false #是否从EURAKA中获取信息
+    service-url:
+      # registerWithEureka关闭后，defaultZone没有配置的必要。如果打开，即使配置为本机一样报错。
+      # 也就是说defaultZone任何时候都没有配置为localhost的必要。这点上John的配置更好，永超和周立包括志朋的配置有点多余。
+      # 但是周立说的对，这个属性默认配置是http://localhost:8761/eureka，也就是当你没有用户名密码安全认证时，本机调试时，客户端可以不配置，
+      # 但对于server来说，这个默认没有什么作用。对于client来说，也只有调试的时候有点作用。
+      # 但有一点很奇怪，既然默认了8761端口，为什么eureka server的默认端口要用8080而不是8761呢？
+      defaultZone: http://127.0.0.1:${server.port}/eureka/ # 本配置应删除。
