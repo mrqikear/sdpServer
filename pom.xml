@@ -11,6 +11,7 @@
         <module>websoket</module>
         <module>erukaServer</module>
         <module>sdb_common</module>
+        <module>sdbHtttpServer</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -52,14 +53,23 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- jetty启动 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- tomcat -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>2.3.2.RELEASE</version>
+                <version>${spring-boot.version}</version>
             </dependency>
-
-
 
             <!-- websoket -->
             <dependency>
@@ -126,17 +136,15 @@
             <dependency> <!-- 引入log4j2依赖 -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-log4j2</artifactId>
-                <version>2.3.2.RELEASE</version>
+                <version>${spring-boot.version}</version>
             </dependency>
 
 
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-slf4j-impl</artifactId>
-                <version>2.9.1</version>
+                <version>${spring-boot.version}</version>
             </dependency>
-
-
 
             <dependency>
                 <groupId>org.slf4j</groupId>

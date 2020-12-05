@@ -9,24 +9,26 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>websoket</artifactId>
+    <artifactId>sdbHtttpServer</artifactId>
+    <description>http模块</description>
 
     <packaging>jar</packaging>
 
     <dependencies>
+        <!-- 定义 lombok 版本 -->
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+    </dependency>
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fast-json.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-        </dependency>
-        <!-- mysql 依赖 -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
+
+
 
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -34,12 +36,6 @@
             <version>${druid.version}</version>
         </dependency>
 
-        <!--log4j -->
-        <dependency> <!-- 引入log4j2依赖 -->
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-log4j2</artifactId>
-            <version>${spring-boot.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -47,18 +43,35 @@
         </dependency>
 
 
+
+        <dependency> <!-- 引入log4j2依赖 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+
+        <!-- 定义 mysql 版本 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- 定义 mybatis 版本 -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- jpa -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-websocket</artifactId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
     </dependencies>
+
+
 
     <build>
         <plugins>
@@ -68,7 +81,7 @@
                 <version>2.1.4.RELEASE</version>
                 <!--这里写上main方法所在类的路径-->
                 <configuration>
-                    <mainClass>com.mrqi.WebSoket8090</mainClass>
+                    <mainClass>com.mrqi.SdpHttpServer8080</mainClass>
                 </configuration>
                 <executions>
                     <execution>
@@ -80,6 +93,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

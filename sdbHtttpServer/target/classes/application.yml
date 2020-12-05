@@ -1,21 +1,21 @@
 # 服务端口号
 server:
-  port: 8090
+  port: 8080
 
 
 #spring配置
 spring:
   application:
-    name: microservice-provider-8080 # 对外暴露的服务名称
+    name: microservice-sdphttpServer-8080 # 对外暴露的服务名称
 
   datasource: # 数据库配置
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
     driver-class-name: com.mysql.cj.jdbc.Driver
     platform: mysql
-    url: jdbc:mysql://127.0.0.1:3306/lqbs_dlt?useUnicode=true&characterEncoding=UTF-8&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
-    username: root
-    password: 123456
+    url: jdbc:mysql://rm-2ze5abt8956gek832o.mysql.rds.aliyuncs.com/vip_sdpdev?useUnicode=true&characterEncoding=utf8
+    username: sdpbiroot
+    password: Sdpbiroot6688
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -39,3 +39,6 @@ mybatis:
     map-underscore-to-camel-case: true
     cache-enabled: true     #mybatis二级缓存
 
+#log4j2
+logging:
+  config: classpath:log4j2.xml
