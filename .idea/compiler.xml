@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="erukaServer" />
-        <module name="sdb_common" />
         <module name="sdbHtttpServer" />
+        <module name="sdb_common" />
         <module name="websoket" />
       </profile>
     </annotationProcessing>

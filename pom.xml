@@ -131,15 +131,6 @@
                 <version>${log4j.version}</version>
             </dependency>
 
-
-
-            <dependency> <!-- 引入log4j2依赖 -->
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-log4j2</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-
-
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-slf4j-impl</artifactId>
@@ -172,10 +163,13 @@
                 <version>5.3.4.RELEASE</version>
             </dependency>
             <!--Eureka-server -->
+
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-eureka-server</artifactId>
                 <version>1.4.7.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka -->
             <!--Eureka-->
@@ -183,6 +177,15 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-eureka</artifactId>
                 <version>1.4.7.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- mybatis plus 代码生成器 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.2.0</version>
             </dependency>
 
         </dependencies>
