@@ -168,8 +168,6 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-eureka-server</artifactId>
                 <version>1.4.7.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
             </dependency>
             <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka -->
             <!--Eureka-->
