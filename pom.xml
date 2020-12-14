@@ -69,6 +69,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${spring-boot.version}</version>
+                <exclusions>
+                <!--去掉默认日志，加载别的日志 , 切换log4j2日志读取  -->
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+                </exclusions>
             </dependency>
 
             <!-- websoket -->

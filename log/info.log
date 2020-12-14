@@ -1,3 +1,0 @@
-[00:05:53:790] [INFO] - org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:598) - Closing JPA EntityManagerFactory for persistence unit 'default'
-[00:05:53:800] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) - Shutting down ExecutorService 'applicationTaskExecutor'
-[00:05:53:801] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
